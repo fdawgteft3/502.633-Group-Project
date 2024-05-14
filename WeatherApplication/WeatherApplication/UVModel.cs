@@ -21,7 +21,7 @@ namespace WeatherApplication
             public List<UVProduct> Products { get; set; }
 
             [Required]
-            public string Coord { get; set; }
+            public string coordinate { get; set; }
         }
 
         public class UVProduct
@@ -66,7 +66,7 @@ namespace WeatherApplication
                 {
                     throw new JsonSerializationException("Missing 'coord' property in JSON object.");
                 }
-                uvData.Coord = coordToken.Value<string>();
+                uvData.coordinate = coordToken.Value<string>();
 
                 // Check for the "products" array
                 var productsToken = jsonObject["products"];

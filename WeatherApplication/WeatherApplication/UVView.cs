@@ -5,20 +5,24 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace WeatherApplication
+
+    //Created by Angus
 {
     internal class UVView
     {
+        //Get Data for Coord and Product
         public void RenderUVData(List<UVModel.UVData> UVDATA)
         {
             Console.WriteLine("UV Data:");
             Console.WriteLine("--------------------");
             foreach (var UV in UVDATA)
             {
-                Console.WriteLine($"Coords: {UV.Coord}");
+                Console.WriteLine($"Coords: {UV.coordinate}");
                 Console.WriteLine($"Products: {UV.Products}");
                 Console.WriteLine();
             }
         }
+        //Get Data for Name and Products
         public void RenderProduct(List<UVModel.UVProduct> UVProduct)
         {
             Console.WriteLine("UV Product Data:");
@@ -31,6 +35,7 @@ namespace WeatherApplication
             }
         }
 
+        //Get Data for Time and Value
         public void RenderUVDataEntry(List<UVModel.UVDataEntry> UVDataEntry)
         {
             Console.WriteLine("UV Entry Data:");
