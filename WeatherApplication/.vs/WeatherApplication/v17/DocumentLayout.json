@@ -7,6 +7,18 @@
       "RelativeMoniker": "D:0:0:{04EAA1F1-1DFD-4A92-B5C9-49D6C57215FC}|WeatherApplication\\WeatherApplication.csproj|solutionrelative:weatherapplication\\uvview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{04EAA1F1-1DFD-4A92-B5C9-49D6C57215FC}|WeatherApplication\\WeatherApplication.csproj|c:\\users\\faber\\onedrive\\documents\\github\\502.633-group-project\\weatherapplication\\weatherapplication\\uvmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04EAA1F1-1DFD-4A92-B5C9-49D6C57215FC}|WeatherApplication\\WeatherApplication.csproj|solutionrelative:weatherapplication\\uvmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04EAA1F1-1DFD-4A92-B5C9-49D6C57215FC}|WeatherApplication\\WeatherApplication.csproj|c:\\users\\faber\\onedrive\\documents\\github\\502.633-group-project\\weatherapplication\\weatherapplication\\huntingview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04EAA1F1-1DFD-4A92-B5C9-49D6C57215FC}|WeatherApplication\\WeatherApplication.csproj|solutionrelative:weatherapplication\\huntingview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04EAA1F1-1DFD-4A92-B5C9-49D6C57215FC}|WeatherApplication\\WeatherApplication.csproj|c:\\users\\faber\\onedrive\\documents\\github\\502.633-group-project\\weatherapplication\\weatherapplication\\tidesmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04EAA1F1-1DFD-4A92-B5C9-49D6C57215FC}|WeatherApplication\\WeatherApplication.csproj|solutionrelative:weatherapplication\\tidesmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{04EAA1F1-1DFD-4A92-B5C9-49D6C57215FC}|WeatherApplication\\WeatherApplication.csproj|c:\\users\\faber\\onedrive\\documents\\github\\502.633-group-project\\weatherapplication\\weatherapplication\\tidescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{04EAA1F1-1DFD-4A92-B5C9-49D6C57215FC}|WeatherApplication\\WeatherApplication.csproj|solutionrelative:weatherapplication\\tidescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -27,16 +39,8 @@
       "RelativeMoniker": "D:0:0:{17C6D386-1806-48A2-A335-48E3194553E8}|TestWeatherProject\\TestWeatherProject.csproj|solutionrelative:testweatherproject\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{04EAA1F1-1DFD-4A92-B5C9-49D6C57215FC}|WeatherApplication\\WeatherApplication.csproj|c:\\users\\faber\\onedrive\\documents\\github\\502.633-group-project\\weatherapplication\\weatherapplication\\uvmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{04EAA1F1-1DFD-4A92-B5C9-49D6C57215FC}|WeatherApplication\\WeatherApplication.csproj|solutionrelative:weatherapplication\\uvmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{04EAA1F1-1DFD-4A92-B5C9-49D6C57215FC}|WeatherApplication\\WeatherApplication.csproj|c:\\users\\faber\\onedrive\\documents\\github\\502.633-group-project\\weatherapplication\\weatherapplication\\fileencoder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{04EAA1F1-1DFD-4A92-B5C9-49D6C57215FC}|WeatherApplication\\WeatherApplication.csproj|solutionrelative:weatherapplication\\fileencoder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{04EAA1F1-1DFD-4A92-B5C9-49D6C57215FC}|WeatherApplication\\WeatherApplication.csproj|c:\\users\\faber\\onedrive\\documents\\github\\502.633-group-project\\weatherapplication\\weatherapplication\\tidesmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{04EAA1F1-1DFD-4A92-B5C9-49D6C57215FC}|WeatherApplication\\WeatherApplication.csproj|solutionrelative:weatherapplication\\tidesmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{04EAA1F1-1DFD-4A92-B5C9-49D6C57215FC}|WeatherApplication\\WeatherApplication.csproj|c:\\users\\faber\\onedrive\\documents\\github\\502.633-group-project\\weatherapplication\\weatherapplication\\huntingmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -58,8 +62,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HuntingView.cs",
+              "DocumentMoniker": "C:\\Users\\faber\\OneDrive\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\WeatherApplication\\HuntingView.cs",
+              "RelativeDocumentMoniker": "WeatherApplication\\HuntingView.cs",
+              "ToolTip": "C:\\Users\\faber\\OneDrive\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\WeatherApplication\\HuntingView.cs",
+              "RelativeToolTip": "WeatherApplication\\HuntingView.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-14T03:04:48.61Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -68,7 +85,7 @@
               "RelativeDocumentMoniker": "WeatherApplication\\UVView.cs",
               "ToolTip": "C:\\Users\\faber\\OneDrive\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\WeatherApplication\\UVView.cs",
               "RelativeToolTip": "WeatherApplication\\UVView.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAQwBUAAABEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-14T02:58:31.809Z",
               "EditorCaption": ""
@@ -76,6 +93,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "UVModel.cs",
+              "DocumentMoniker": "C:\\Users\\faber\\OneDrive\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\WeatherApplication\\UVModel.cs",
+              "RelativeDocumentMoniker": "WeatherApplication\\UVModel.cs",
+              "ToolTip": "C:\\Users\\faber\\OneDrive\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\WeatherApplication\\UVModel.cs",
+              "RelativeToolTip": "WeatherApplication\\UVModel.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAjwCMAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-29T01:56:22.748Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "TidesController.cs",
               "DocumentMoniker": "C:\\Users\\faber\\OneDrive\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\WeatherApplication\\TidesController.cs",
               "RelativeDocumentMoniker": "WeatherApplication\\TidesController.cs",
@@ -83,12 +113,11 @@
               "RelativeToolTip": "WeatherApplication\\TidesController.cs",
               "ViewState": "AQIAAA4AAAAAAAAAAAAuwBIAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T02:48:58.977Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-30T02:48:58.977Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
               "Title": "WeatherModel.cs",
               "DocumentMoniker": "C:\\Users\\faber\\OneDrive\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\WeatherApplication\\WeatherModel.cs",
               "RelativeDocumentMoniker": "WeatherApplication\\WeatherModel.cs",
@@ -100,7 +129,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "WeatherApplicationVeiw.cs",
               "DocumentMoniker": "C:\\Users\\faber\\OneDrive\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\WeatherApplication\\WeatherApplicationVeiw.cs",
               "RelativeDocumentMoniker": "WeatherApplication\\WeatherApplicationVeiw.cs",
@@ -112,7 +141,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\faber\\OneDrive\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\WeatherApplication\\Program.cs",
               "RelativeDocumentMoniker": "WeatherApplication\\Program.cs",
@@ -124,7 +153,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "UVAPIContoller.cs",
               "DocumentMoniker": "C:\\Users\\faber\\OneDrive\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\WeatherApplication\\UVAPIContoller.cs",
               "RelativeDocumentMoniker": "WeatherApplication\\UVAPIContoller.cs",
@@ -136,19 +165,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "UVModel.cs",
-              "DocumentMoniker": "C:\\Users\\faber\\OneDrive\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\WeatherApplication\\UVModel.cs",
-              "RelativeDocumentMoniker": "WeatherApplication\\UVModel.cs",
-              "ToolTip": "C:\\Users\\faber\\OneDrive\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\WeatherApplication\\UVModel.cs",
-              "RelativeToolTip": "WeatherApplication\\UVModel.cs",
-              "ViewState": "AQIAAFEAAAAAAAAAAAApwFgAAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-29T01:56:22.748Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "HuntingModel.cs",
               "DocumentMoniker": "C:\\Users\\faber\\OneDrive\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\WeatherApplication\\HuntingModel.cs",
               "RelativeDocumentMoniker": "WeatherApplication\\HuntingModel.cs",
@@ -160,7 +177,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "FileEncoder.cs",
               "DocumentMoniker": "C:\\Users\\faber\\OneDrive\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\WeatherApplication\\FileEncoder.cs",
               "RelativeDocumentMoniker": "WeatherApplication\\FileEncoder.cs",
@@ -172,7 +189,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 3,
               "Title": "TidesModel.cs",
               "DocumentMoniker": "C:\\Users\\faber\\OneDrive\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\WeatherApplication\\TidesModel.cs",
               "RelativeDocumentMoniker": "WeatherApplication\\TidesModel.cs",
@@ -180,11 +197,12 @@
               "RelativeToolTip": "WeatherApplication\\TidesModel.cs",
               "ViewState": "AQIAAFUAAAAAAAAAAAArwF8AAAAkAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-29T01:49:37.789Z"
+              "WhenOpened": "2024-04-29T01:49:37.789Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "HttpWrapper.cs",
               "DocumentMoniker": "C:\\Users\\faber\\OneDrive\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\WeatherApplication\\HttpWrapper.cs",
               "RelativeDocumentMoniker": "WeatherApplication\\HttpWrapper.cs",
@@ -196,7 +214,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "UnitTest1.cs",
               "DocumentMoniker": "C:\\Users\\faber\\OneDrive\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\TestWeatherProject\\UnitTest1.cs",
               "RelativeDocumentMoniker": "TestWeatherProject\\UnitTest1.cs",
