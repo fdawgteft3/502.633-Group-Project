@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 
@@ -42,7 +43,7 @@ namespace WeatherApplication
                 // Retrieve weather data and render the view
                 await controller.RefreshWeatherData(actualAPIKey, cityName);
                 controller.RefreshPanelView();
-       //Run through to tidal information
+               //Run through to tidal information
                 double lat = -37.406;
                 double lon = 175.947;
  
@@ -80,6 +81,26 @@ namespace WeatherApplication
                             response.EnsureSuccessStatusCode();
 
                             string result = await response.Content.ReadAsStringAsync();
+                            File.WriteAllText(filename, result);
+                            TidesModel.TidesData tidalData = JsonConvert.DeserializeObject<TidesModel.TidesData>(result);
+
+                            //Print MetaData
+                            Console.WriteLine($"Latitude: {tidalData.Metadata.Latitude}");
+                            Console.WriteLine($"Longitude: {tidalData.Metadata.Longitude}");
+                            Console.WriteLine($"Datum: {tidalData.Metadata.Datum}");
+                            Console.WriteLine($"Start Date: {tidalData.Metadata.Start}");
+                            Console.WriteLine($"Number of Days: {tidalData.Metadata.Days}");
+                            Console.WriteLine($"Interval: {tidalData.Metadata.Interval}");
+                            Console.WriteLine($"Height: {tidalData.Metadata.Height}");
+
+                            // Print tide values
+                            Console.WriteLine("\nTide Values:");
+                            foreach (var value in tidalData.Values)
+                            {
+                                Console.WriteLine($"Time: {value.Time}, Value: {value.Value}");
+                            }
+
+                            // Write the JSON response to a file
                             File.WriteAllText(filename, result);
                         }
                         catch (HttpRequestException ex)
