@@ -205,24 +205,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\st4157\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\faber\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\st4157\\source\\repos\\WeatherApplication\\WeatherApplication\\WeatherApplication.csproj",
+      "projectUniqueName": "C:\\Users\\faber\\OneDrive\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\WeatherApplication\\WeatherApplication.csproj",
       "projectName": "WeatherApplication",
-      "projectPath": "C:\\Users\\st4157\\source\\repos\\WeatherApplication\\WeatherApplication\\WeatherApplication.csproj",
-      "packagesPath": "C:\\Users\\st4157\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\st4157\\source\\repos\\WeatherApplication\\WeatherApplication\\obj\\",
+      "projectPath": "C:\\Users\\faber\\OneDrive\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\WeatherApplication\\WeatherApplication.csproj",
+      "packagesPath": "C:\\Users\\faber\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\faber\\OneDrive\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\WeatherApplication\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\st4157\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\faber\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -230,7 +225,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -275,7 +269,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
