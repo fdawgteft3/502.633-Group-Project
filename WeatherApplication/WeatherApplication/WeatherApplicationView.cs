@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Security.Cryptography.X509Certificates;
 using WeatherApplication; 
 
 namespace WeatherApplication
@@ -34,18 +35,6 @@ namespace WeatherApplication
                 Console.WriteLine($"City ID: {weatherData.Id}");
                 Console.WriteLine($"City Name: {weatherData.Name}");
                 Console.WriteLine($"Cod: {weatherData.Cod}");
-            }
-        }
-
-        public void Render (UVModel.UVData uvData)
-        {
-            if (null == uvData)
-            {
-                Console.WriteLine("UV data is null.");
-            }
-            else
-            {
-
             }
         }
 

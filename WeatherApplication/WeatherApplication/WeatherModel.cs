@@ -59,6 +59,10 @@ namespace WeatherApplication
         public int Visibility { get; }
         public WindInfo Wind { get; }
         public CloudsInfo Clouds { get; }
+
+        //Added UV
+       // public UVInfo UV { get; }
+
         public long Dt { get; }
         public SysInfo Sys { get; }
         public int Timezone { get; }
@@ -108,6 +112,9 @@ namespace WeatherApplication
             Lat = lat;
         }
     }
+
+    //UV
+    //public class UVInfo
 
     public class WeatherInfo
     {

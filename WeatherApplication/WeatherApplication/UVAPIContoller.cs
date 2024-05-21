@@ -7,10 +7,10 @@ namespace WeatherApplication
     public class UVController
     {
         private readonly UVModel                    m_UVModel;
-        private readonly WeatherApplicationView     m_UVView;
+        private readonly UVView                     m_UVView;
         private UVModel.UVData?                     m_UVData;
 
-        public UVController(UVModel model, WeatherApplicationView view)
+        public UVController(UVModel model, UVView view)
         {
             m_UVModel = model ?? throw new ArgumentNullException(nameof(model));
             m_UVView = view ?? throw new ArgumentNullException(nameof(view));
@@ -26,14 +26,18 @@ namespace WeatherApplication
             {
                 // Call GetUVDataAsync method to retrieve UV data
                 m_UVData = await m_UVModel.GetUVDataAsync(apiKey, coordInfo);
-                // Render the UV data
+                //Render the UV data
                 m_UVView.Render(m_UVData);
+
+
             }
             catch (UVServiceException ex)
             {
                 ErrorLogger.Instance.LogError($"An error occurred while retrieving UV data: {ex.Message}");
             }
         }
+
+        
 
         public class UVServiceException : Exception
         {
