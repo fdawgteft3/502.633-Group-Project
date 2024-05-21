@@ -19,7 +19,7 @@ namespace WeatherApplication
             m_apiKey = apiKey ?? throw new ArgumentNullException(nameof(apiKey));
         }
 
-        public async Task<SolarFlareData> GetSolarDataAsync(string apiKey, DateTime startDate, DateTime endDate)
+        public async Task<SolarFlareDataArr> GetSolarDataAsync(string apiKey, string startDate, string endDate)
         {
             try
             {
@@ -29,7 +29,7 @@ namespace WeatherApplication
                 response.EnsureSuccessStatusCode();
                 string json = await response.Content.ReadAsStringAsync();
                 SolarFlareDeserializer deserializer = new SolarFlareDeserializer();
-                SolarFlareData solarData = deserializer.DeserializeSolarFlareData(json) ?? throw new Exception("Weather data deserialization failed.");
+                SolarFlareDataArr solarData = deserializer.DeserializeSolarFlareData(json) ?? throw new Exception("Solar flare data deserialization failed.");
                 return solarData;
             }
             catch (HttpRequestException ex)
@@ -66,29 +66,54 @@ namespace WeatherApplication
         }
     }
 
-    public class SolarFlareDeserializer
+    public class SolarFlareDataArr
     {
-        public SolarFlareData DeserializeSolarFlareData(string json)
+        public SolarFlareData[] Flares { get; set; }
+        public SolarFlareDataArr(int flareCount)
         {
-            var jsonObject = JObject.Parse(json);
-
-            var beginTimeObject = jsonObject["beginTime"] ?? throw new Exception("beginTime object is missing in JSON.");
-            var peakTimeObject = jsonObject["peakTime"] ?? throw new Exception("peakTime object is missing in JSON.");
-            var endTimeObject = jsonObject["endTime"] ?? throw new Exception("endTime object is missing in JSON.");
-            var classTypeObject = jsonObject["classType"] ?? throw new Exception("classType object is missing in JSON.");
-            var noteObject = jsonObject["note"] ?? throw new Exception("note object is missing in JSON.");
-
-            var beginTime = beginTimeObject.Value<DateTime>();
-            var peakTime = peakTimeObject.Value<DateTime>();
-            var endTime = endTimeObject.Value<DateTime>();
-            var classType = classTypeObject.Value<string>();
-            var note = noteObject.Value<string>();
-
-            var solarData = new SolarFlareData(
-                beginTime, peakTime, endTime, classType, note
-                );
-                return solarData;
+            Flares = new SolarFlareData[flareCount];
         }
     }
-  
+
+    public class SolarFlareDeserializer
+    {
+        public SolarFlareDataArr DeserializeSolarFlareData(string json)
+        {
+            JArray jsonArray = JArray.Parse(json);
+            int flareCount = jsonArray.Count;
+            SolarFlareDataArr arr = new SolarFlareDataArr(flareCount);
+
+            int count = 0;
+            foreach (JObject jsonObject in jsonArray.Children<JObject>())
+            {
+                var beginTimeObject = jsonObject["beginTime"] ?? throw new Exception("beginTime object is missing in JSON.");
+                var peakTimeObject = jsonObject["peakTime"] ?? throw new Exception("peakTime object is missing in JSON.");
+                var endTimeObject = jsonObject["endTime"] ?? throw new Exception("endTime object is missing in JSON.");
+                var classTypeObject = jsonObject["classType"] ?? throw new Exception("classType object is missing in JSON.");
+                var noteObject = jsonObject["note"] ?? throw new Exception("note object is missing in JSON.");
+
+                var beginTime = beginTimeObject.Value<DateTime>();
+                var peakTime = peakTimeObject.Value<DateTime>();
+                var endTime = endTimeObject.Value<DateTime>();
+                var classType = classTypeObject.Value<string>();
+                var note = noteObject.Value<string>();
+
+                var solarData = new SolarFlareData(
+                    beginTime, peakTime, endTime, classType, note
+                    );
+                arr.Flares[count] = solarData;
+                count += 1;
+            }
+            
+                return arr;
+        }
+
+
+    }
+    public class SolarFlareServiceException : Exception
+    {
+        public SolarFlareServiceException(string message, Exception innerException) : base(message, innerException)
+        {
+        }
+    }
 }
