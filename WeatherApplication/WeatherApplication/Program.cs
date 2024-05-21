@@ -32,7 +32,18 @@ namespace WeatherApplication
 
             await controller.RefreshSolarFlareData(actualAPIKey, startDate, endDate);
             controller.RefreshPanelView();
-            
+
+
+            ///ANGUS UV THINGY
+            //UV Thing
+            //WeatherApplication.CoordInfo coord = new CoordInfo(174.72, -37.39);
+            //string APIKEYUV = "fLUvOkhsj0ANkkoa3JH7XifMFUOBcVz4";
+            //UVView uvView = new UVView();
+            //UVModel uVModel = new UVModel(APIKEYUV, coord);
+            //UVController uVController = new UVController(uVModel, uvView);
+
+            //await uVController.RefreshUVData(APIKEYUV, coord);
+
             /*
              try
             {
@@ -66,16 +77,8 @@ namespace WeatherApplication
                 string cityName = "Pokeno";
 
                 //Hunting View
-
-
-                //UV Thing
-                WeatherApplication.CoordInfo coord = new CoordInfo(174.72, -37.39);
-                string APIKEYUV = "fLUvOkhsj0ANkkoa3JH7XifMFUOBcVz4";
-                UVView uvView = new UVView();
-                UVModel uVModel = new UVModel(APIKEYUV, coord);
-                UVController uVController = new UVController(uVModel, uvView);
-
-                await uVController.RefreshUVData(APIKEYUV, coord);
+                
+                
                 
                 
                 
