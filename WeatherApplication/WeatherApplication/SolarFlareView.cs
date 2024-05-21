@@ -18,8 +18,8 @@ namespace WeatherApplication
             {
                 foreach (SolarFlareData flare in solarFlareData.Flares)
                 {
-                    Console.WriteLine($"Solar flare data from {flare.BeginTime} to {flare.EndTime}");
-                    Console.WriteLine($"");
+                    Console.WriteLine($"Solar flare lasting from {flare.BeginTime} to {flare.EndTime}");
+                    Console.WriteLine($"Flare ID: {flare.FlareID}");
                 }
                 
             }

@@ -49,14 +49,16 @@ namespace WeatherApplication
 
     public class SolarFlareData
     {
-        public DateTime BeginTime { get; }
-        public DateTime PeakTime { get; }
-        public DateTime EndTime { get; }
+        public string FlareID { get; }
+        public string BeginTime { get; }
+        public string PeakTime { get; }
+        public string EndTime { get; }
         public string ClassType { get; }
         public string Note { get; }
 
-        public SolarFlareData(DateTime beginTime, DateTime peakTime, DateTime endTime, string classType, string note)
+        public SolarFlareData(string flareID, string beginTime, string peakTime, string endTime, string classType, string note)
         {
+            FlareID = flareID;
             BeginTime = beginTime;
             PeakTime = peakTime;
             EndTime = endTime;
@@ -86,20 +88,23 @@ namespace WeatherApplication
             int count = 0;
             foreach (JObject jsonObject in jsonArray.Children<JObject>())
             {
+                //Console.WriteLine(jsonObject.ToString());
+                var flareIdObject = jsonObject["flrID"] ?? throw new Exception("flrID object is missing in JSON.");
                 var beginTimeObject = jsonObject["beginTime"] ?? throw new Exception("beginTime object is missing in JSON.");
                 var peakTimeObject = jsonObject["peakTime"] ?? throw new Exception("peakTime object is missing in JSON.");
                 var endTimeObject = jsonObject["endTime"] ?? throw new Exception("endTime object is missing in JSON.");
                 var classTypeObject = jsonObject["classType"] ?? throw new Exception("classType object is missing in JSON.");
                 var noteObject = jsonObject["note"] ?? throw new Exception("note object is missing in JSON.");
 
-                var beginTime = beginTimeObject.Value<DateTime>();
-                var peakTime = peakTimeObject.Value<DateTime>();
-                var endTime = endTimeObject.Value<DateTime>();
+                var flareId = flareIdObject.Value<string>();
+                var beginTime = beginTimeObject.Value<string>();
+                var peakTime = peakTimeObject.Value<string>();
+                var endTime = endTimeObject.Value<string>();
                 var classType = classTypeObject.Value<string>();
                 var note = noteObject.Value<string>();
 
                 var solarData = new SolarFlareData(
-                    beginTime, peakTime, endTime, classType, note
+                    flareId, beginTime, peakTime, endTime, classType, note
                     );
                 arr.Flares[count] = solarData;
                 count += 1;
