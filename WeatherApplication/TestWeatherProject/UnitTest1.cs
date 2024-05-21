@@ -10,6 +10,7 @@ using Microsoft.VisualStudio.TestPlatform.TestHost;
 using static WeatherApplication.HuntingModel;
 using static WeatherApplication.UVModel;
 using Newtonsoft.Json;
+using System.Reflection.Metadata;
 
 namespace WeatherApplication.Tests
 {
@@ -183,13 +184,20 @@ namespace WeatherApplication.Tests
 
                 // Act
                 var tideData = JsonConvert.DeserializeObject<TidesModel.TidesData>(json);
-
+                DateTime expectedStartDate = new DateTime(2024, 4, 28, 12, 0, 0); // Example expected start date
+                DateTime actualStartDate = tideData.Metadata.Start;
                 // Assert
                 Assert.IsNotNull(tideData);
                 Assert.IsNotNull(tideData.Metadata);
                 Assert.IsNotNull(tideData.Values);
                 Assert.That(tideData.Metadata.Latitude, Is.EqualTo(-37.045));
                 Assert.That(tideData.Metadata.Longitude, Is.EqualTo(174.846));
+                Assert.That(tideData.Metadata.Datum, Is.EqualTo("LAT"));
+                Assert.That(tideData.Metadata.Interval, Is.EqualTo(0));
+                Assert.That(tideData.Metadata.Days, Is.EqualTo(7));
+                Assert.That(actualStartDate, Is.EqualTo(expectedStartDate));
+                Assert.That(tideData.Metadata.Height, Is.EqualTo("LAT = 2.241m below MSL"));
+
                 // Add more assertions as needed
             }
         }
