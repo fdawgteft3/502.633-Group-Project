@@ -32,17 +32,34 @@ namespace WeatherApplication
 
                 // Create an instance of WeatherAPIView
                 WeatherApplicationView view = new WeatherApplicationView();
-
+                
                 // Instantiate the controller with the view and model
                 WeatherAPIController controller = new WeatherAPIController(weatherService, view);
 
                 // Specify the city name for which you want to retrieve weather data
                 string cityName = "Pokeno";
 
+                //Hunting View
+
+
+                //UV Thing
+                WeatherApplication.CoordInfo coord = new CoordInfo(174.72, -37.39);
+                string APIKEYUV = "fLUvOkhsj0ANkkoa3JH7XifMFUOBcVz4";
+                UVView uvView = new UVView();
+                UVModel uVModel = new UVModel(APIKEYUV, coord);
+                UVController uVController = new UVController(uVModel, uvView);
+
+                await uVController.RefreshUVData(APIKEYUV, coord);
+                
+                
+                
+
                 // Retrieve weather data and render the view
-                await controller.RefreshWeatherData(actualAPIKey, cityName);
-                controller.RefreshPanelView();
-       //Run through to tidal information
+                //await controller.RefreshWeatherData(actualAPIKey, cityName);
+                //controller.RefreshPanelView();
+                
+
+                //Run through to tidal information
                 double lat = -37.406;
                 double lon = 175.947;
  

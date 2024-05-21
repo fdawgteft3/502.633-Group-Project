@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Net.Http;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -14,6 +15,10 @@ namespace WeatherApplication
         private string m_apiKey;
 
         public string Coord { get; set; }
+        public void GetCoord() 
+        { 
+            
+        }
 
         public class UVData
         {
@@ -129,7 +134,33 @@ namespace WeatherApplication
         internal async Task<UVData> GetUVDataAsync(string apiKey, CoordInfo coordInfo)
         {
 
-            throw new NotImplementedException();
+            try
+            {
+                double lat = coordInfo.Lat;
+                double lon = coordInfo.Lon;
+                string encodedApiKey = Uri.EscapeDataString(apiKey);
+                string url = $"https://api.niwa.co.nz/uv/data?lat={lat}&long={lon}&apikey={apiKey}&units=metric";
+                Console.WriteLine(url);
+                HttpResponseMessage response = await m_httpClient.GetAsync(url);
+                response.EnsureSuccessStatusCode();
+                string json = await response.Content.ReadAsStringAsync();
+                UVDataDeserializer deserializer = new UVDataDeserializer();
+                UVData uVData = deserializer.Deserialize(json) ?? throw new Exception("Weather data deserialization failed.");
+                return uVData;
+            }
+            catch (HttpRequestException ex)
+            {
+                throw new WeatherServiceException("Error occurred while sending the HTTP request.", ex);
+            }
+            catch (JsonException ex)
+            {
+                throw new WeatherServiceException("Error occurred while parsing JSON response.", ex);
+            }
+            catch (Exception ex)
+            {
+                throw new WeatherServiceException("An error occurred during the asynchronous operation.", ex);
+            }
         }
     }
 }
+

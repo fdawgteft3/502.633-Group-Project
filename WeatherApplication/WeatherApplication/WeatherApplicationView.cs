@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Security.Cryptography.X509Certificates;
 using WeatherApplication; 
 
 namespace WeatherApplication
@@ -28,28 +29,12 @@ namespace WeatherApplication
                 Console.WriteLine($"Wind Speed: {weatherData.Wind?.Speed}m/s"); // Added null-conditional operator
                 Console.WriteLine($"Wind Degree: {weatherData.Wind?.Deg}°"); // Added null-conditional operator
                 Console.WriteLine($"Cloudiness: {weatherData.Clouds?.All}%"); // Added null-conditional operator
-
-                //UV Output
-                //Console.WriteLine($"Coords: {weatherData.Product}");
-
                 Console.WriteLine($"Date and Time: {UnixTimeStampToDateTime(weatherData.Dt)}"); // Convert UNIX timestamp to DateTime
                 Console.WriteLine($"Sys Info: Type: {weatherData.Sys?.Type}, ID: {weatherData.Sys?.Id}, Country: {weatherData.Sys?.Country}, Sunrise: {UnixTimeStampToDateTime(weatherData.Sys.Sunrise)}, Sunset: {UnixTimeStampToDateTime(weatherData.Sys.Sunset)}"); // Added null-conditional operator and converted UNIX timestamps
                 Console.WriteLine($"Timezone: {weatherData.Timezone}");
                 Console.WriteLine($"City ID: {weatherData.Id}");
                 Console.WriteLine($"City Name: {weatherData.Name}");
                 Console.WriteLine($"Cod: {weatherData.Cod}");
-            }
-        }
-
-        public void Render (UVModel.UVData uvData)
-        {
-            if (null == uvData)
-            {
-                Console.WriteLine("UV data is null.");
-            }
-            else
-            {
-
             }
         }
 

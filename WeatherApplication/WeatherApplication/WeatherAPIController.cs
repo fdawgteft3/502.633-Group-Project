@@ -7,13 +7,35 @@ namespace WeatherApplication
     public class WeatherAPIController
     {
         private readonly WeatherApplicationView m_weatherView;
-        private readonly WeatherModel           m_weatherModel;
-        private WeatherData?                    m_weatherData;
+        private readonly WeatherModel m_weatherModel;
+        private WeatherData? m_weatherData;
+
+        
+
         public WeatherAPIController(WeatherModel model, WeatherApplicationView view)
         {
             m_weatherModel = model ?? throw new ArgumentNullException(nameof(model));
             m_weatherView = view ?? throw new ArgumentNullException(nameof(view));
         }
+        //ghfgh
+        public WeatherApplication.CoordInfo GetCoordinates()
+        {
+            
+            var lon = 0.0;
+            var lat = 0.0;
+            var coordInfo = new CoordInfo(lon, lat);
+            try
+            {
+                coordInfo = m_weatherData.Coord;
+                return coordInfo;
+            }
+            catch
+            {
+                return coordInfo;
+            }
+        }
+    
+
         public async Task RefreshWeatherData(string apiKey, string city)
         {
             if (string.IsNullOrWhiteSpace(city))
@@ -36,6 +58,8 @@ namespace WeatherApplication
             if (null != m_weatherData)
             {
                 m_weatherView.Render(m_weatherData);
+                
+                
             }
         }
     }
