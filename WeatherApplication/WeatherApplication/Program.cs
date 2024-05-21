@@ -8,7 +8,33 @@ namespace WeatherApplication
     {
         static async Task Main(string[] args)
         {
-            try
+            Console.Write("AAAAAAAAAAAAAAAAAA");
+            FileEncoder encoder = FileEncoder.GetInstance("security.sys");
+
+            // Read the API key from the file
+            encoder.Write("ApiKey", "owdBAVImRXO4HIhMs1FjQbuT7O2QmcOocfJs370L");
+            string actualAPIKey = encoder.Read("ApiKey");
+
+            if (string.IsNullOrEmpty(actualAPIKey))
+            {
+                Console.Write("Enter API key: ");
+                actualAPIKey = Console.ReadLine();
+
+                // Write the API key to the file
+                encoder.Write("ApiKey", actualAPIKey);
+            }
+
+            SolarFlareModel solarFlareService = new SolarFlareModel(actualAPIKey);
+            SolarFlareView view = new SolarFlareView();
+            SolarFlareController controller = new SolarFlareController(solarFlareService, view);
+            string startDate = "2016-01-01";
+            string endDate = "2016-01-30";
+
+            await controller.RefreshSolarFlareData(actualAPIKey, startDate, endDate);
+            controller.RefreshPanelView();
+            
+            /*
+             try
             {
                 // Get an instance of FileEncoder for handling file operations
                 FileEncoder encoder = FileEncoder.GetInstance("security.sys");
@@ -116,6 +142,8 @@ namespace WeatherApplication
             }
 
 
+
+             */
 
         }
     }
