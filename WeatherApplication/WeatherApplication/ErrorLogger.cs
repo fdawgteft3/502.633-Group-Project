@@ -1,19 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 
 namespace WeatherApplication
 {
     public sealed class ErrorLogger
     {
-        private static readonly ErrorLogger instance = new ErrorLogger();
-        private static readonly string logFilePath = "error.log";
+        private static readonly Lazy<ErrorLogger> lazyInstance = new Lazy<ErrorLogger>(() => new ErrorLogger());
+        private readonly string logFilePath;
 
-        public static ErrorLogger Instance
+        public static ErrorLogger Instance => lazyInstance.Value;
+
+        private ErrorLogger()
         {
-            get { return instance; }
+            // Get the log file path from environment variables, or use a default value if not set
+            logFilePath = Environment.GetEnvironmentVariable("ERROR_LOG_FILE_PATH") ?? "error.log";
         }
 
         public void LogError(string errorMessage)
@@ -33,3 +33,4 @@ namespace WeatherApplication
         }
     }
 }
+
