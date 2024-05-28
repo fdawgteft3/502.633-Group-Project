@@ -54,15 +54,20 @@ namespace WeatherApplication
         public string PeakTime { get; }
         public string EndTime { get; }
         public string ClassType { get; }
+        public string SourceLocation { get; }
+        public string ActiveRegionNum { get; }
+
         public string Note { get; }
 
-        public SolarFlareData(string flareID, string beginTime, string peakTime, string endTime, string classType, string note)
+        public SolarFlareData(string flareID, string beginTime, string peakTime, string endTime, string classType, string sourceLocation, string activeRegionNum, string note)
         {
             FlareID = flareID;
             BeginTime = beginTime;
             PeakTime = peakTime;
             EndTime = endTime;
             ClassType = classType;
+            SourceLocation = sourceLocation;
+            ActiveRegionNum = activeRegionNum;
             Note = note;
 
         }
@@ -94,6 +99,8 @@ namespace WeatherApplication
                 var peakTimeObject = jsonObject["peakTime"] ?? throw new Exception("peakTime object is missing in JSON.");
                 var endTimeObject = jsonObject["endTime"] ?? throw new Exception("endTime object is missing in JSON.");
                 var classTypeObject = jsonObject["classType"] ?? throw new Exception("classType object is missing in JSON.");
+                var sourceLocationObject = jsonObject["sourceLocation"] ?? throw new Exception("sourceLocation object is missing in JSON.");
+                var activeRegionNumObject = jsonObject["activeRegionNum"] ?? throw new Exception("activeRegionNum object is missing in JSON.");
                 var noteObject = jsonObject["note"] ?? throw new Exception("note object is missing in JSON.");
 
                 var flareId = flareIdObject.Value<string>();
@@ -101,10 +108,12 @@ namespace WeatherApplication
                 var peakTime = peakTimeObject.Value<string>();
                 var endTime = endTimeObject.Value<string>();
                 var classType = classTypeObject.Value<string>();
+                var sourceLocation = sourceLocationObject.Value<string>();
+                var activeRegionNum = activeRegionNumObject.Value<string>();
                 var note = noteObject.Value<string>();
 
                 var solarData = new SolarFlareData(
-                    flareId, beginTime, peakTime, endTime, classType, note
+                    flareId, beginTime, peakTime, endTime, classType, sourceLocation, activeRegionNum, note
                     );
                 arr.Flares[count] = solarData;
                 count += 1;
