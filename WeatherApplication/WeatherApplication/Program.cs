@@ -87,6 +87,27 @@ namespace WeatherApplication
             //Make sure it has the data
             await uVController.RefreshUVData(APIKEYUV, coord);
         }
+        static void HuntingApplication()
+        {
+            String filepath = "hunting_season_data.txt";
+            var huntingView = new HuntingView();
+            var huntingModel = new HuntingModel();
+            var huntingController = new HuntingController(huntingModel);
+
+            List<HuntingModel.HuntingSeason> season;
+            try
+            {
+                season = huntingController.RefreshHuntingSeasonData(filepath);
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine($"An Error Occurred: {ex.Message}");
+                return;
+            }
+            huntingView.Render(season);
+
+        }
+        
 
         static async Task TidesApplication()
         {
@@ -173,7 +194,7 @@ namespace WeatherApplication
         {
             try
             {
-                Console.WriteLine("1 for solar/2 for Weather/3 for uv/4 for tides");
+                Console.WriteLine("1 for solar/2 for Weather/3 for uv/4 for tides/5 for Hunting Information");
                 string userInput = Console.ReadLine();
                 if (userInput == "1")
                 {
@@ -191,6 +212,11 @@ namespace WeatherApplication
                 {
                     await Program.TidesApplication();
                 }
+                if(userInput == "5")
+                {
+                     Program.HuntingApplication();
+                }
+
             }
             catch (Exception ex)
             {
