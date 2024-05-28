@@ -89,21 +89,29 @@ namespace WeatherApplication
         }
         static void HuntingApplication()
         {
+            //Run to display Hunting Information
+            //Define filepath that holds Hunting Season Information
             String filepath = "hunting_season_data.txt";
+            //Create Instance of HuntingView
             var huntingView = new HuntingView();
+            //Create instance of Hunting Model
             var huntingModel = new HuntingModel();
+            //Create instance of Hunting Controller
             var huntingController = new HuntingController(huntingModel);
-
+            //Defining parsed list of Hunting Seasons from txt file
             List<HuntingModel.HuntingSeason> season;
             try
             {
+                //Try to get expected results from Controller Function
                 season = huntingController.RefreshHuntingSeasonData(filepath);
             }
             catch(Exception ex)
             {
+                //If method fails to execute for any reason - error message to be displayed
                 Console.WriteLine($"An Error Occurred: {ex.Message}");
                 return;
             }
+            //Run code that prints Hunting Information to Console
             huntingView.Render(season);
 
         }
@@ -194,26 +202,32 @@ namespace WeatherApplication
         {
             try
             {
+                //Create a Console Navigation Menu to allocate Unser Input to run specified code allowing to view information separately
                 Console.WriteLine("1 for solar/2 for Weather/3 for uv/4 for tides/5 for Hunting Information");
                 string userInput = Console.ReadLine();
                 if (userInput == "1")
                 {
+                    //Allocate User Input to run Weather Application Method
                     await Program.SolarApplication();
                 }
                 if (userInput == "2")
-                {
+
+                    //Allocate User Input to run Solar Application Method
                     await Program.WeatherApplicataion();
                 }
                 if (userInput == "3")
                 {
+                    //Allocate User Input to run UV Application Method
                     await Program.UVApplication();
                 }
                 if (userInput == "4")
                 {
+                    //Allocate User Input to run Tides Application Method
                     await Program.TidesApplication();
                 }
                 if(userInput == "5")
                 {
+                    //Allocate User Input to run Hunting Application Method
                      Program.HuntingApplication();
                 }
 
