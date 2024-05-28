@@ -43,7 +43,25 @@ namespace WeatherApplication
                 // Retrieve weather data and render the view
                 await controller.RefreshWeatherData(actualAPIKey, cityName);
                 controller.RefreshPanelView();
-               //Run through to tidal information
+
+
+                //Run of the UV Information
+                //Coordinates
+                WeatherApplication.CoordInfo coord = new CoordInfo(174.72, -37.39);
+                //APIKey
+                string APIKEYUV = "fLUvOkhsj0ANkkoa3JH7XifMFUOBcVz4";
+                //Create instance of UVView
+                UVView uvView = new UVView();
+                //Create instance of UVModel
+                UVModel uVModel = new UVModel(APIKEYUV, coord);
+                //Instantiate the controller
+                UVController uVController = new UVController(uVModel, uvView);
+                //Make sure it has the data
+                await uVController.RefreshUVData(APIKEYUV, coord);
+
+
+
+                //Run through to tidal information
                 double lat = -37.406;
                 double lon = 175.947;
  
