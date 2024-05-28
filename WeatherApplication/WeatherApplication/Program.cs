@@ -210,7 +210,7 @@ namespace WeatherApplication
                     //Allocate User Input to run Weather Application Method
                     await Program.SolarApplication();
                 }
-                if (userInput == "2")
+                if (userInput == "2") { 
 
                     //Allocate User Input to run Solar Application Method
                     await Program.WeatherApplicataion();
