@@ -36,8 +36,7 @@ namespace WeatherApplication
             await solarController.RefreshSolarFlareData(actualAPIKey, solarStartDate, solarEndDate);
             solarController.RefreshPanelView();
         }
-
-        static async Task UVApplication()
+        static async Task WeatherApplicataion()
         {
             FileEncoder encoder = FileEncoder.GetInstance("security.sys");
             string actualAPIKey = encoder.Read("ApiKey");
@@ -70,6 +69,9 @@ namespace WeatherApplication
             // Retrieve weather data and render the view
             await controller.RefreshWeatherData(actualAPIKey, cityName);
             controller.RefreshPanelView();
+        }
+        static async Task UVApplication()
+        { 
 
             //Run of the UV Information
             //Coordinates
@@ -171,23 +173,24 @@ namespace WeatherApplication
         {
             try
             {
-                Console.WriteLine("1 for solar/2 for uv/3 for tides");
+                Console.WriteLine("1 for solar/2 for Weather/3 for uv/4 for tides");
                 string userInput = Console.ReadLine();
                 if (userInput == "1")
                 {
                     await Program.SolarApplication();
                 }
-
                 if (userInput == "2")
                 {
-                    await Program.UVApplication();
+                    await Program.WeatherApplicataion();
                 }
                 if (userInput == "3")
                 {
+                    await Program.UVApplication();
+                }
+                if (userInput == "4")
+                {
                     await Program.TidesApplication();
                 }
-
-
             }
             catch (Exception ex)
             {
