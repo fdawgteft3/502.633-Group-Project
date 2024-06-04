@@ -7,8 +7,8 @@ namespace WeatherApplication
 {
     public sealed class HttpClientWrapper : IDisposable
     {
-        private static volatile HttpClientWrapper? m_instance;
-        private static readonly object m_lock = new object();
+        private static readonly Lazy<HttpClientWrapper> m_instance =
+            new Lazy<HttpClientWrapper>(() => new HttpClientWrapper());
         private readonly HttpClient m_httpClient;
 
         private HttpClientWrapper()
@@ -17,23 +17,7 @@ namespace WeatherApplication
             m_httpClient.Timeout = TimeSpan.FromSeconds(10);
         }
 
-        public static HttpClientWrapper Instance
-        {
-            get
-            {
-                if (m_instance == null)
-                {
-                    lock (m_lock)
-                    {
-                        if (m_instance == null)
-                        {
-                            m_instance = new HttpClientWrapper();
-                        }
-                    }
-                }
-                return m_instance;
-            }
-        }
+        public static HttpClientWrapper Instance => m_instance.Value;
 
         // Implement IDisposable pattern
         public void Dispose()
@@ -41,7 +25,7 @@ namespace WeatherApplication
             m_httpClient.Dispose();
         }
 
-        // You can expose the HttpClient instance if needed
+        // Expose the HttpClient instance if needed
         public HttpClient Client => m_httpClient;
 
         // Implement GetAsync method
@@ -68,6 +52,7 @@ namespace WeatherApplication
     {
         public HttpClientWrapperException(string message, Exception innerException) : base(message, innerException)
         {
+
         }
     }
 }
