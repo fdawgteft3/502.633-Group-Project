@@ -35,10 +35,7 @@ namespace WeatherApplication
 
         public async Task<TidesData> GetTidesData(double lat, double lon, string apiKey, DateTime startDate, DateTime endDate)
         {
-            if (string.IsNullOrWhiteSpace(apiKey))
-            {
-                throw new ArgumentException("API key cannot be null or empty.");
-            }
+            ValidateApiKey(apiKey);
 
             TidesData tidesData = new TidesData
             {
@@ -95,6 +92,13 @@ namespace WeatherApplication
             }
             resultMessage += "Done";
             return tidesData;
+        }
+        private void ValidateApiKey (string apiKey)
+        {
+            if (string.IsNullOrWhiteSpace(apiKey))
+            {
+                throw new ArgumentException("API key cannot be null or empty.");
+            }
         }
     }
 }

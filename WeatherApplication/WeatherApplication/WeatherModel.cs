@@ -19,21 +19,14 @@ namespace WeatherApplication
 
         public async Task<WeatherData> GetWeatherAsync(string apiKey, string cityName)
         {
-            if (string.IsNullOrWhiteSpace(cityName))
-            {
-                throw new ArgumentException("City name cannot be null or empty.", nameof(cityName));
-            }
+
+            ValidateCityName(cityName);
             try
             {
-                string encodedCityName = Uri.EscapeDataString(cityName);
-                string encodedApiKey = Uri.EscapeDataString(m_apiKey);
-                string url = $"https://api.openweathermap.org/data/2.5/weather?q={encodedCityName}&appid={encodedApiKey}&units=metric";
-                HttpResponseMessage response = await m_httpClient.GetAsync(url);
-                response.EnsureSuccessStatusCode();
-                string json = await response.Content.ReadAsStringAsync();
-                WeatherDataDeserializer deserializer = new WeatherDataDeserializer();
-                WeatherData weatherData = deserializer.DeserializeWeatherData(json) ?? throw new Exception("Weather data deserialization failed.");
-                return weatherData;
+                string url = BuildEncodedURL(cityName, apiKey);
+                string json = await FetchWeatherDataAsync(url);
+                WeatherData data = DeserializeWeatherData(json);
+                return data;
             }
             catch (HttpRequestException ex)
             {
@@ -48,7 +41,34 @@ namespace WeatherApplication
                 throw new WeatherServiceException("An error occurred during the asynchronous operation.", ex);
             }
         }
+        private void ValidateCityName(string cityName)
+        {
+            if (string.IsNullOrWhiteSpace(cityName))
+            {
+                throw new ArgumentException("City name cannot be null or empty.", nameof(cityName));
+            }
+        }
+        private string BuildEncodedURL(string cityName, string apiKey)
+        {
+            string encodedCityName = Uri.EscapeDataString(cityName);
+            string encodedApiKey = Uri.EscapeDataString(apiKey);
+            return $"https://api.openweathermap.org/data/2.5/weather?q={encodedCityName}&appid={encodedApiKey}&units=metric";
+        }
+        private async Task<string> FetchWeatherDataAsync(string url)
+        {
+            HttpResponseMessage response = await m_httpClient.GetAsync(url); 
+            response.EnsureSuccessStatusCode(); 
+            return await response.Content.ReadAsStringAsync(); 
+        }
+        private WeatherData DeserializeWeatherData(string json)
+        {
+            WeatherDataDeserializer deserializer = new WeatherDataDeserializer();
+            return deserializer.DeserializeWeatherData(json) ?? throw new Exception("Weather data deserialization failed.");
+        }
+
+
     }
+
 
     public class WeatherData
     {
