@@ -5,21 +5,20 @@ using System.Text;
 
 namespace WeatherApplication
 {
+    //Implements the Singleton Pattern - the rationale behind this
+    //is that FileEncoder only needs one instance as it accesses
+    //one file(security.sys) and Singleton prevents multiple modifications
+    //to the file at the same time which could cause the file to corrupt
     public class FileEncoder
     {
         private static readonly object lockObject = new object();
         private static FileEncoder instance;
         private readonly string filePath;
         private readonly byte[] key = Convert.FromBase64String("C/+YjsuTzXJzop3TX46d2WATe1qZ/PiNT/mCRxrSw1o=");
-        private readonly byte[] iv;
 
         private FileEncoder(string filePath)
         {
             this.filePath = filePath;
-            using (Aes aes = Aes.Create())
-            {
-                iv = aes.IV;
-            }
         }
 
         public static FileEncoder GetInstance(string filePath)
@@ -40,14 +39,20 @@ namespace WeatherApplication
         public void Write(string key, string value)
         {
             // Encrypt the key-value pair
-            string encryptedPair = EncryptString($"{key}={value}", this.key, iv);
+            string encryptedPair = EncryptString($"{key}={value}", this.key);
 
-            // Write to file
-            using (StreamWriter writer = new StreamWriter(filePath, true))
+            //Check if key already exists
+            if (Read(key) == null)
             {
-                writer.WriteLine(encryptedPair);
+                // Write to file
+                using (StreamWriter writer = new StreamWriter(filePath, true))
+                {
+                    writer.WriteLine(encryptedPair);
+
+                }
             }
         }
+
         public string Read(string key)
         {
             // Read lines from the file
@@ -56,7 +61,7 @@ namespace WeatherApplication
             // Find the line corresponding to the key
             foreach (string line in lines)
             {
-                string decryptedLine = DecryptString(line, this.key, iv);
+                string decryptedLine = DecryptString(line, this.key);
                 string[] parts = decryptedLine.Split('=');
                 if (parts.Length == 2 && parts[0] == key)
                 {
@@ -68,12 +73,12 @@ namespace WeatherApplication
             // Key not found
             return null;
         }
-        private string EncryptString(string input, byte[] key, byte[] iv)
+        private string EncryptString(string input, byte[] key)
         {
             using (Aes aesAlg = Aes.Create())
             {
                 aesAlg.Key = key;
-                aesAlg.IV = iv;
+                aesAlg.GenerateIV();
 
                 // Create an encryptor to perform the stream transform.
                 ICryptoTransform encryptor = aesAlg.CreateEncryptor(aesAlg.Key, aesAlg.IV);
@@ -81,6 +86,9 @@ namespace WeatherApplication
                 // Create the streams used for encryption.
                 using (MemoryStream msEncrypt = new MemoryStream())
                 {
+                    //store IV
+                    msEncrypt.Write(aesAlg.IV, 0, aesAlg.IV.Length);
+
                     using (CryptoStream csEncrypt = new CryptoStream(msEncrypt, encryptor, CryptoStreamMode.Write))
                     {
                         using (StreamWriter swEncrypt = new StreamWriter(csEncrypt))
@@ -93,19 +101,17 @@ namespace WeatherApplication
                 }
             }
         }
-        private string DecryptString(string input, byte[] key, byte[] iv)
+        private string DecryptString(string input, byte[] key)
         {
             using (Aes aesAlg = Aes.Create())
             {
                 aesAlg.Key = key;
-                aesAlg.IV = iv;
-
-                // Create a decryptor to perform the stream transform.
-                ICryptoTransform decryptor = aesAlg.CreateDecryptor(aesAlg.Key, aesAlg.IV);
-
                 // Create the streams used for decryption.
                 using (MemoryStream msDecrypt = new MemoryStream(Convert.FromBase64String(input)))
                 {
+                    byte[] iv = new byte[aesAlg.BlockSize / 8];
+                    msDecrypt.Read(iv, 0, iv.Length); //get IV
+                    ICryptoTransform decryptor = aesAlg.CreateDecryptor(aesAlg.Key, iv);
                     using (CryptoStream csDecrypt = new CryptoStream(msDecrypt, decryptor, CryptoStreamMode.Read))
                     {
                         using (StreamReader srDecrypt = new StreamReader(csDecrypt))
