@@ -1154,19 +1154,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\faber\\.nuget\\packages\\": {}
+    "C:\\Users\\sj4mc\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\faber\\OneDrive\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\TestWeatherProject\\TestWeatherProject.csproj",
+      "projectUniqueName": "C:\\Users\\sj4mc\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\TestWeatherProject\\TestWeatherProject.csproj",
       "projectName": "TestWeatherProject",
-      "projectPath": "C:\\Users\\faber\\OneDrive\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\TestWeatherProject\\TestWeatherProject.csproj",
-      "packagesPath": "C:\\Users\\faber\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\faber\\OneDrive\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\TestWeatherProject\\obj\\",
+      "projectPath": "C:\\Users\\sj4mc\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\TestWeatherProject\\TestWeatherProject.csproj",
+      "packagesPath": "C:\\Users\\sj4mc\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\sj4mc\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\TestWeatherProject\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\faber\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\sj4mc\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1180,8 +1180,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\faber\\OneDrive\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\WeatherApplication\\WeatherApplication.csproj": {
-              "projectPath": "C:\\Users\\faber\\OneDrive\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\WeatherApplication\\WeatherApplication.csproj"
+            "C:\\Users\\sj4mc\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\WeatherApplication\\WeatherApplication.csproj": {
+              "projectPath": "C:\\Users\\sj4mc\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\WeatherApplication\\WeatherApplication.csproj"
             }
           }
         }
@@ -1238,7 +1238,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

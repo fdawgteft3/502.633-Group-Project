@@ -11,8 +11,7 @@ namespace WeatherApplication
     //to the file at the same time which could cause the file to corrupt
     public class FileEncoder
     {
-        private static readonly object lockObject = new object();
-        private static FileEncoder instance;
+        private static readonly Lazy<FileEncoder> lazyInstance = new Lazy<FileEncoder>(() => new FileEncoder("security.sys"));
         private readonly string filePath;
         private readonly byte[] key = Convert.FromBase64String("C/+YjsuTzXJzop3TX46d2WATe1qZ/PiNT/mCRxrSw1o=");
 
@@ -21,19 +20,12 @@ namespace WeatherApplication
             this.filePath = filePath;
         }
 
-        public static FileEncoder GetInstance(string filePath)
+        public static FileEncoder Instance
         {
-            if (instance == null)
+            get
             {
-                lock (lockObject)
-                {
-                    if (instance == null)
-                    {
-                        instance = new FileEncoder(filePath);
-                    }
-                }
+                return lazyInstance.Value;
             }
-            return instance;
         }
 
         public void Write(string key, string value)

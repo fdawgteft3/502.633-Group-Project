@@ -17,7 +17,7 @@ namespace WeatherApplication
             m_weatherModel = model ?? throw new ArgumentNullException(nameof(model));
             m_weatherView = view ?? throw new ArgumentNullException(nameof(view));
         }
-        //ghfgh
+        
         public WeatherApplication.CoordInfo GetCoordinates()
         {
             
