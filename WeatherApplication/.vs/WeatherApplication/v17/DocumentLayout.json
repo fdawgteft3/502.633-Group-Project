@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\sj4mc\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{04EAA1F1-1DFD-4A92-B5C9-49D6C57215FC}|WeatherApplication\\WeatherApplication.csproj|c:\\users\\sj4mc\\documents\\github\\502.633-group-project\\weatherapplication\\weatherapplication\\tidesmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{04EAA1F1-1DFD-4A92-B5C9-49D6C57215FC}|WeatherApplication\\WeatherApplication.csproj|solutionrelative:weatherapplication\\tidesmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{04EAA1F1-1DFD-4A92-B5C9-49D6C57215FC}|WeatherApplication\\WeatherApplication.csproj|c:\\users\\sj4mc\\documents\\github\\502.633-group-project\\weatherapplication\\weatherapplication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04EAA1F1-1DFD-4A92-B5C9-49D6C57215FC}|WeatherApplication\\WeatherApplication.csproj|solutionrelative:weatherapplication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17C6D386-1806-48A2-A335-48E3194553E8}|TestWeatherProject\\TestWeatherProject.csproj|c:\\users\\sj4mc\\documents\\github\\502.633-group-project\\weatherapplication\\testweatherproject\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17C6D386-1806-48A2-A335-48E3194553E8}|TestWeatherProject\\TestWeatherProject.csproj|solutionrelative:testweatherproject\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{04EAA1F1-1DFD-4A92-B5C9-49D6C57215FC}|WeatherApplication\\WeatherApplication.csproj|c:\\users\\sj4mc\\documents\\github\\502.633-group-project\\weatherapplication\\weatherapplication\\fileencoder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{04EAA1F1-1DFD-4A92-B5C9-49D6C57215FC}|WeatherApplication\\WeatherApplication.csproj|solutionrelative:weatherapplication\\fileencoder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04EAA1F1-1DFD-4A92-B5C9-49D6C57215FC}|WeatherApplication\\WeatherApplication.csproj|c:\\users\\sj4mc\\documents\\github\\502.633-group-project\\weatherapplication\\weatherapplication\\tidesmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04EAA1F1-1DFD-4A92-B5C9-49D6C57215FC}|WeatherApplication\\WeatherApplication.csproj|solutionrelative:weatherapplication\\tidesmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{04EAA1F1-1DFD-4A92-B5C9-49D6C57215FC}|WeatherApplication\\WeatherApplication.csproj|c:\\users\\sj4mc\\documents\\github\\502.633-group-project\\weatherapplication\\weatherapplication\\errorlogger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -17,10 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{04EAA1F1-1DFD-4A92-B5C9-49D6C57215FC}|WeatherApplication\\WeatherApplication.csproj|c:\\users\\sj4mc\\documents\\github\\502.633-group-project\\weatherapplication\\weatherapplication\\httpwrapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{04EAA1F1-1DFD-4A92-B5C9-49D6C57215FC}|WeatherApplication\\WeatherApplication.csproj|solutionrelative:weatherapplication\\httpwrapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{17C6D386-1806-48A2-A335-48E3194553E8}|TestWeatherProject\\TestWeatherProject.csproj|c:\\users\\sj4mc\\documents\\github\\502.633-group-project\\weatherapplication\\testweatherproject\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{17C6D386-1806-48A2-A335-48E3194553E8}|TestWeatherProject\\TestWeatherProject.csproj|solutionrelative:testweatherproject\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{04EAA1F1-1DFD-4A92-B5C9-49D6C57215FC}|WeatherApplication\\WeatherApplication.csproj|c:\\users\\sj4mc\\documents\\github\\502.633-group-project\\weatherapplication\\weatherapplication\\solarflaremodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -49,10 +53,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{04EAA1F1-1DFD-4A92-B5C9-49D6C57215FC}|WeatherApplication\\WeatherApplication.csproj|c:\\users\\sj4mc\\documents\\github\\502.633-group-project\\weatherapplication\\weatherapplication\\huntingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{04EAA1F1-1DFD-4A92-B5C9-49D6C57215FC}|WeatherApplication\\WeatherApplication.csproj|solutionrelative:weatherapplication\\huntingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{04EAA1F1-1DFD-4A92-B5C9-49D6C57215FC}|WeatherApplication\\WeatherApplication.csproj|c:\\users\\sj4mc\\documents\\github\\502.633-group-project\\weatherapplication\\weatherapplication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{04EAA1F1-1DFD-4A92-B5C9-49D6C57215FC}|WeatherApplication\\WeatherApplication.csproj|solutionrelative:weatherapplication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{04EAA1F1-1DFD-4A92-B5C9-49D6C57215FC}|WeatherApplication\\WeatherApplication.csproj|c:\\users\\sj4mc\\documents\\github\\502.633-group-project\\weatherapplication\\weatherapplication\\hunting_season_data.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -85,152 +85,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\sj4mc\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\WeatherApplication\\Program.cs",
               "RelativeDocumentMoniker": "WeatherApplication\\Program.cs",
               "ToolTip": "C:\\Users\\sj4mc\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\WeatherApplication\\Program.cs",
               "RelativeToolTip": "WeatherApplication\\Program.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAAwBEAAABQAAAA",
+              "ViewState": "AQIAAG8AAAAAAAAAAADwv3kAAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-29T04:17:29.117Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "WeatherApplicationView.cs",
-              "DocumentMoniker": "C:\\Users\\sj4mc\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\WeatherApplication\\WeatherApplicationView.cs",
-              "RelativeDocumentMoniker": "WeatherApplication\\WeatherApplicationView.cs",
-              "ToolTip": "C:\\Users\\sj4mc\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\WeatherApplication\\WeatherApplicationView.cs",
-              "RelativeToolTip": "WeatherApplication\\WeatherApplicationView.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADEAAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-04T04:28:20.624Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TidesModel.cs",
-              "DocumentMoniker": "C:\\Users\\sj4mc\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\WeatherApplication\\TidesModel.cs",
-              "RelativeDocumentMoniker": "WeatherApplication\\TidesModel.cs",
-              "ToolTip": "C:\\Users\\sj4mc\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\WeatherApplication\\TidesModel.cs",
-              "RelativeToolTip": "WeatherApplication\\TidesModel.cs",
-              "ViewState": "AQIAACAAAAAAAAAAAAAcwDUAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-29T01:49:37.789Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "WeatherModel.cs",
-              "DocumentMoniker": "C:\\Users\\sj4mc\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\WeatherApplication\\WeatherModel.cs",
-              "RelativeDocumentMoniker": "WeatherApplication\\WeatherModel.cs",
-              "ToolTip": "C:\\Users\\sj4mc\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\WeatherApplication\\WeatherModel.cs",
-              "RelativeToolTip": "WeatherApplication\\WeatherModel.cs",
-              "ViewState": "AQIAACoAAAAAAAAAAAAYwNkAAABqAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-30T02:32:04.039Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "FileEncoder.cs",
-              "DocumentMoniker": "C:\\Users\\sj4mc\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\WeatherApplication\\FileEncoder.cs",
-              "RelativeDocumentMoniker": "WeatherApplication\\FileEncoder.cs",
-              "ToolTip": "C:\\Users\\sj4mc\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\WeatherApplication\\FileEncoder.cs",
-              "RelativeToolTip": "WeatherApplication\\FileEncoder.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-29T01:51:45.193Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "HttpWrapper.cs",
-              "DocumentMoniker": "C:\\Users\\sj4mc\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\WeatherApplication\\HttpWrapper.cs",
-              "RelativeDocumentMoniker": "WeatherApplication\\HttpWrapper.cs",
-              "ToolTip": "C:\\Users\\sj4mc\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\WeatherApplication\\HttpWrapper.cs",
-              "RelativeToolTip": "WeatherApplication\\HttpWrapper.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABHAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-28T04:24:48.676Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ErrorLogger.cs",
-              "DocumentMoniker": "C:\\Users\\sj4mc\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\WeatherApplication\\ErrorLogger.cs",
-              "RelativeDocumentMoniker": "WeatherApplication\\ErrorLogger.cs",
-              "ToolTip": "C:\\Users\\sj4mc\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\WeatherApplication\\ErrorLogger.cs",
-              "RelativeToolTip": "WeatherApplication\\ErrorLogger.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-28T04:13:42.038Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "UnitTest1.cs",
               "DocumentMoniker": "C:\\Users\\sj4mc\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\TestWeatherProject\\UnitTest1.cs",
               "RelativeDocumentMoniker": "TestWeatherProject\\UnitTest1.cs",
               "ToolTip": "C:\\Users\\sj4mc\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\TestWeatherProject\\UnitTest1.cs",
               "RelativeToolTip": "TestWeatherProject\\UnitTest1.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAMwAAAAFAAAA",
+              "ViewState": "AQIAAPYAAAAAAAAAAAAowA0BAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-29T01:28:29.09Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "SolarFlareModel.cs",
-              "DocumentMoniker": "C:\\Users\\sj4mc\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\WeatherApplication\\SolarFlareModel.cs",
-              "RelativeDocumentMoniker": "WeatherApplication\\SolarFlareModel.cs",
-              "ToolTip": "C:\\Users\\sj4mc\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\WeatherApplication\\SolarFlareModel.cs",
-              "RelativeToolTip": "WeatherApplication\\SolarFlareModel.cs",
-              "ViewState": "AQIAAF4AAAAAAAAAAADwv4UAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-18T04:15:35.699Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "HuntingView.cs",
-              "DocumentMoniker": "C:\\Users\\sj4mc\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\WeatherApplication\\HuntingView.cs",
-              "RelativeDocumentMoniker": "WeatherApplication\\HuntingView.cs",
-              "ToolTip": "C:\\Users\\sj4mc\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\WeatherApplication\\HuntingView.cs",
-              "RelativeToolTip": "WeatherApplication\\HuntingView.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAcAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T03:04:48.61Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "HuntingModel.cs",
-              "DocumentMoniker": "C:\\Users\\sj4mc\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\WeatherApplication\\HuntingModel.cs",
-              "RelativeDocumentMoniker": "WeatherApplication\\HuntingModel.cs",
-              "ToolTip": "C:\\Users\\sj4mc\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\WeatherApplication\\HuntingModel.cs",
-              "RelativeToolTip": "WeatherApplication\\HuntingModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAoAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-29T01:56:10.558Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
@@ -239,7 +121,117 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 3,
+              "Title": "TidesModel.cs",
+              "DocumentMoniker": "C:\\Users\\sj4mc\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\WeatherApplication\\TidesModel.cs",
+              "RelativeDocumentMoniker": "WeatherApplication\\TidesModel.cs",
+              "ToolTip": "C:\\Users\\sj4mc\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\WeatherApplication\\TidesModel.cs",
+              "RelativeToolTip": "WeatherApplication\\TidesModel.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAmwDUAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-29T01:49:37.789Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "WeatherModel.cs",
+              "DocumentMoniker": "C:\\Users\\sj4mc\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\WeatherApplication\\WeatherModel.cs",
+              "RelativeDocumentMoniker": "WeatherApplication\\WeatherModel.cs",
+              "ToolTip": "C:\\Users\\sj4mc\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\WeatherApplication\\WeatherModel.cs",
+              "RelativeToolTip": "WeatherApplication\\WeatherModel.cs",
+              "ViewState": "AQIAACoAAAAAAAAAAAAYwNkAAABqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-30T02:32:04.039Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ErrorLogger.cs",
+              "DocumentMoniker": "C:\\Users\\sj4mc\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\WeatherApplication\\ErrorLogger.cs",
+              "RelativeDocumentMoniker": "WeatherApplication\\ErrorLogger.cs",
+              "ToolTip": "C:\\Users\\sj4mc\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\WeatherApplication\\ErrorLogger.cs",
+              "RelativeToolTip": "WeatherApplication\\ErrorLogger.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-28T04:13:42.038Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FileEncoder.cs",
+              "DocumentMoniker": "C:\\Users\\sj4mc\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\WeatherApplication\\FileEncoder.cs",
+              "RelativeDocumentMoniker": "WeatherApplication\\FileEncoder.cs",
+              "ToolTip": "C:\\Users\\sj4mc\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\WeatherApplication\\FileEncoder.cs",
+              "RelativeToolTip": "WeatherApplication\\FileEncoder.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAxwAIAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-29T01:51:45.193Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "WeatherApplicationView.cs",
+              "DocumentMoniker": "C:\\Users\\sj4mc\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\WeatherApplication\\WeatherApplicationView.cs",
+              "RelativeDocumentMoniker": "WeatherApplication\\WeatherApplicationView.cs",
+              "ToolTip": "C:\\Users\\sj4mc\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\WeatherApplication\\WeatherApplicationView.cs",
+              "RelativeToolTip": "WeatherApplication\\WeatherApplicationView.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADEAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-04T04:28:20.624Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "HttpWrapper.cs",
+              "DocumentMoniker": "C:\\Users\\sj4mc\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\WeatherApplication\\HttpWrapper.cs",
+              "RelativeDocumentMoniker": "WeatherApplication\\HttpWrapper.cs",
+              "ToolTip": "C:\\Users\\sj4mc\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\WeatherApplication\\HttpWrapper.cs",
+              "RelativeToolTip": "WeatherApplication\\HttpWrapper.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-28T04:24:48.676Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SolarFlareModel.cs",
+              "DocumentMoniker": "C:\\Users\\sj4mc\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\WeatherApplication\\SolarFlareModel.cs",
+              "RelativeDocumentMoniker": "WeatherApplication\\SolarFlareModel.cs",
+              "ToolTip": "C:\\Users\\sj4mc\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\WeatherApplication\\SolarFlareModel.cs",
+              "RelativeToolTip": "WeatherApplication\\SolarFlareModel.cs",
+              "ViewState": "AQIAAF4AAAAAAAAAAADwv4UAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-18T04:15:35.699Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "HuntingView.cs",
+              "DocumentMoniker": "C:\\Users\\sj4mc\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\WeatherApplication\\HuntingView.cs",
+              "RelativeDocumentMoniker": "WeatherApplication\\HuntingView.cs",
+              "ToolTip": "C:\\Users\\sj4mc\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\WeatherApplication\\HuntingView.cs",
+              "RelativeToolTip": "WeatherApplication\\HuntingView.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAcAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-14T03:04:48.61Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "HuntingModel.cs",
+              "DocumentMoniker": "C:\\Users\\sj4mc\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\WeatherApplication\\HuntingModel.cs",
+              "RelativeDocumentMoniker": "WeatherApplication\\HuntingModel.cs",
+              "ToolTip": "C:\\Users\\sj4mc\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\WeatherApplication\\HuntingModel.cs",
+              "RelativeToolTip": "WeatherApplication\\HuntingModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAoAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-29T01:56:10.558Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "HuntingController.cs",
               "DocumentMoniker": "C:\\Users\\sj4mc\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\WeatherApplication\\HuntingController.cs",
               "RelativeDocumentMoniker": "WeatherApplication\\HuntingController.cs",
@@ -247,12 +239,11 @@
               "RelativeToolTip": "WeatherApplication\\HuntingController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-28T02:50:18.621Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-28T02:50:18.621Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "WeatherAPIController.cs",
               "DocumentMoniker": "C:\\Users\\sj4mc\\Documents\\GitHub\\502.633-Group-Project\\WeatherApplication\\WeatherApplication\\WeatherAPIController.cs",
               "RelativeDocumentMoniker": "WeatherApplication\\WeatherAPIController.cs",
@@ -260,8 +251,7 @@
               "RelativeToolTip": "WeatherApplication\\WeatherAPIController.cs",
               "ViewState": "AQIAACQAAAAAAAAAAAAYwBMAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-18T02:04:09.662Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-18T02:04:09.662Z"
             },
             {
               "$type": "Document",

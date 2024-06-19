@@ -267,7 +267,7 @@ namespace WeatherApplication.Tests
         public void FileEncoder_AddNameValuePair()
         {
             // Get an instance of FileEncoder for testing
-            FileEncoder encoder = FileEncoder.GetInstance(testFilePath);
+            FileEncoder encoder = FileEncoder.Instance;
             // Write key-value pairs for testing
             encoder.Write("ApiKey", "a173994356f879bb3e422754bfdde559");
             // Read values by key for testing

@@ -14,7 +14,7 @@ namespace WeatherApplication
             //Solar Application
             // Read the API key from the file
 
-            FileEncoder encoder = FileEncoder.GetInstance("security.sys");
+            FileEncoder encoder = FileEncoder.Instance;
             encoder.Write("ApiKey", "owdBAVImRXO4HIhMs1FjQbuT7O2QmcOocfJs370L");
             string actualAPIKey = encoder.Read("ApiKey");
 
@@ -38,7 +38,7 @@ namespace WeatherApplication
         }
         static async Task WeatherApplicataion()
         {
-            FileEncoder encoder = FileEncoder.GetInstance("security.sys");
+            FileEncoder encoder = FileEncoder.Instance;
             string actualAPIKey = encoder.Read("ApiKey");
             // Read the API key from the file
             encoder.Write("ApiKey", "a173994356f879bb3e422754bfdde559");
@@ -119,7 +119,7 @@ namespace WeatherApplication
 
         static async Task TidesApplication()
         {
-            FileEncoder encoder = FileEncoder.GetInstance("security.sys");
+            FileEncoder encoder = FileEncoder.Instance;
             encoder.Write("ApiKey", "a173994356f879bb3e422754bfdde559");
             string actualAPIKey = encoder.Read("ApiKey");
            
