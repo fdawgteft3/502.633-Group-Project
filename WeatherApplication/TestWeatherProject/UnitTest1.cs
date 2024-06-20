@@ -275,5 +275,51 @@ namespace WeatherApplication.Tests
             Assert.That(actualAPIKey, Is.EqualTo("a173994356f879bb3e422754bfdde559"));
         }
     }
+
+    [TestFixture]
+    public class SolarFlareDeserializerTests
+    {
+        [Test]
+        public void DeserializeSolarFlareData_ReturnsSolarFlareDataObject()
+        {
+            // Arrange
+            string json = " [{\r\n    \"flrID\": \"2016-01-01T23:00:00-FLR-001\",\r\n    \"instruments\": [\r\n      {\r\n        \"displayName\": \"GOES15: SEM/XRS 1.0-8.0\"\r\n      }\r\n    ],\r\n    \"beginTime\": \"2016-01-01T23:00Z\",\r\n    \"peakTime\": \"2015-01-02T00:10Z\",\r\n    \"endTime\": null,\r\n    \"classType\": \"M2.3\",\r\n    \"sourceLocation\": \"S21W73\",\r\n    \"activeRegionNum\": 12473,\r\n    \"note\": \"Associated eruption visible in SOD AIA 171. 193, and 304 with opening field lines and filament liftoff.\",\r\n    \"linkedEvents\": [\r\n      {\r\n        \"activityID\": \"2016-01-01T23:12:00-CME-001\"\r\n      },\r\n      {\r\n        \"activityID\": \"2016-01-02T02:48:00-SEP-001\"\r\n      },\r\n      {\r\n        \"activityID\": \"2016-01-02T04:30:00-SEP-001\"\r\n      }\r\n    ],\r\n    \"submissionTime\": \"2016-01-04T09:22Z\",\r\n    \"link\": \"https://webtools.ccmc.gsfc.nasa.gov/DONKI/view/FLR/9963/-1\"\r\n  }]    ";
+
+            SolarFlareData expectedSolarFlareData = new SolarFlareData(
+                "2016-01-01T23:00:00-FLR-001",
+                "2016-01-01T23:00Z",
+                "2015-01-02T00:10Z",
+                null,
+                "M2.3",
+                "S21W73",
+                "12473",
+                "Associated eruption visible in SOD AIA 171. 193, and 304 with opening field lines and filament liftoff.");
+
+            SolarFlareDeserializer deserializer = new SolarFlareDeserializer();
+
+            // Act
+            SolarFlareDataArr actualSolarFlareDataArray = deserializer.DeserializeSolarFlareData(json);
+            SolarFlareData actualSolarFlareData = actualSolarFlareDataArray.Flares[0];
+
+            // Assert
+            Assert.IsNotNull(actualSolarFlareData); // Check if actualSolarFlareData is not null
+            Assert.IsNotNull(actualSolarFlareData.FlareID);
+            Assert.IsNotNull(actualSolarFlareData.BeginTime);
+            Assert.IsNotNull(actualSolarFlareData.PeakTime);
+            Assert.IsNotNull(actualSolarFlareData.ClassType);
+            Assert.IsNotNull(actualSolarFlareData.SourceLocation);
+            Assert.IsNotNull(actualSolarFlareData.ActiveRegionNum);
+            Assert.IsNotNull(actualSolarFlareData.Note);
+
+            Assert.That(actualSolarFlareData.FlareID, Is.EqualTo(expectedSolarFlareData.FlareID));
+            Assert.That(actualSolarFlareData.BeginTime, Is.EqualTo(expectedSolarFlareData.BeginTime));
+            Assert.That(actualSolarFlareData.PeakTime, Is.EqualTo(expectedSolarFlareData.PeakTime));
+            Assert.That(actualSolarFlareData.ClassType, Is.EqualTo(expectedSolarFlareData.ClassType));
+            Assert.That(actualSolarFlareData.SourceLocation, Is.EqualTo(expectedSolarFlareData.SourceLocation));
+            Assert.That(actualSolarFlareData.ActiveRegionNum, Is.EqualTo(expectedSolarFlareData.ActiveRegionNum));
+            Assert.That(actualSolarFlareData.Note, Is.EqualTo(expectedSolarFlareData.Note));
+        }
+    }
 }
+
 
