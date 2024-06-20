@@ -15,8 +15,8 @@ namespace WeatherApplication
             // Read the API key from the file
 
             FileEncoder encoder = FileEncoder.Instance;
-            encoder.Write("ApiKey", "owdBAVImRXO4HIhMs1FjQbuT7O2QmcOocfJs370L");
-            string actualAPIKey = encoder.Read("ApiKey");
+            encoder.Write("SolarKey", "owdBAVImRXO4HIhMs1FjQbuT7O2QmcOocfJs370L");
+            string actualAPIKey = encoder.Read("SolarKey");
 
             if (string.IsNullOrEmpty(actualAPIKey))
             {
@@ -24,7 +24,7 @@ namespace WeatherApplication
                 actualAPIKey = Console.ReadLine();
 
                 // Write the API key to the file
-                encoder.Write("ApiKey", actualAPIKey);
+                encoder.Write("SolarKey", actualAPIKey);
             }
 
             SolarFlareModel solarFlareService = new SolarFlareModel(actualAPIKey);
@@ -39,10 +39,10 @@ namespace WeatherApplication
         static async Task WeatherApplicataion()
         {
             FileEncoder encoder = FileEncoder.Instance;
-            string actualAPIKey = encoder.Read("ApiKey");
+            string actualAPIKey = encoder.Read("WeatherKey");
             // Read the API key from the file
-            encoder.Write("ApiKey", "a173994356f879bb3e422754bfdde559");
-            actualAPIKey = encoder.Read("ApiKey");
+            encoder.Write("WeatherKey", "a173994356f879bb3e422754bfdde559");
+            actualAPIKey = encoder.Read("WeatherKey");
 
             // If API key is not found in the file, prompt the user to input it
             if (string.IsNullOrEmpty(actualAPIKey))
@@ -51,7 +51,7 @@ namespace WeatherApplication
                 actualAPIKey = Console.ReadLine();
 
                 // Write the API key to the file
-                encoder.Write("ApiKey", actualAPIKey);
+                encoder.Write("WeatherKey", actualAPIKey);
             }
 
             // Create an instance of WeatherServiceModel with the API key
@@ -120,8 +120,8 @@ namespace WeatherApplication
         static async Task TidesApplication()
         {
             FileEncoder encoder = FileEncoder.Instance;
-            encoder.Write("ApiKey", "a173994356f879bb3e422754bfdde559");
-            string actualAPIKey = encoder.Read("ApiKey");
+            encoder.Write("TidesKey", "a173994356f879bb3e422754bfdde559");
+            string actualAPIKey = encoder.Read("TidesKey");
            
 
 
